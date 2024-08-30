@@ -41,7 +41,7 @@ function install_node() {
     install_nodejs_and_npm
     install_pm2
 
-    apt install python3-pip
+    apt install -y python3-pip
     
     pip3 install pillow -i https://mirrors.aliyun.com/pypi/simple/
     pip3 install ddddocr -i https://mirrors.aliyun.com/pypi/simple/
