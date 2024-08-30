@@ -41,10 +41,12 @@ function install_node() {
     install_nodejs_and_npm
     install_pm2
 
-    pip3 install pillow
-    pip3 install ddddocr
-    pip3 install requests
-    pip3 install loguru
+    apt install python3-pip
+    
+    pip3 install pillow -i https://mirrors.aliyun.com/pypi/simple/
+    pip3 install ddddocr -i https://mirrors.aliyun.com/pypi/simple/
+    pip3 install requests -i https://mirrors.aliyun.com/pypi/simple/
+    pip3 install loguru -i https://mirrors.aliyun.com/pypi/simple/
 
 
     # 获取用户名
@@ -62,7 +64,8 @@ function install_node() {
     sudo apt update && sudo apt upgrade -y
     sudo apt install -y curl iptables build-essential git wget jq make gcc nano tmux htop nvme-cli pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip libleveldb-dev lz4 snapd
 
-    pm2 start dawn.py
+    # pm2 start dawn.py
+    nohup python3 dawn.py &
 }
 
 install_node
