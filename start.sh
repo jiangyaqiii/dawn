@@ -50,13 +50,13 @@ function install_node() {
 
 
     # 获取用户名
-    read -r -p "请输入用户名: " DAWNUSERNAME
-    export DAWNUSERNAME=$DAWNUSERNAME
+    # read -r -p "请输入用户名: " DAWNUSERNAME
+    # export DAWNUSERNAME=$DAWNUSERNAME
 
     # 获取密码
-    read -r -p "请输入密码: " DAWNPASSWORD
-    export DAWNPASSWORD=$DAWNPASSWORD
-
+    # read -r -p "请输入密码: " DAWNPASSWORD
+    # export DAWNPASSWORD=$DAWNPASSWORD
+    
     echo $DAWNUSERNAME:$DAWNPASSWORD > password.txt
 
     wget -O dawn.py https://raw.githubusercontent.com/b1n4he/DawnAuto/main/dawn.py
